@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4AA8D8" />
+      <stop offset="60%" stop-color="#88CEEB" />
+      <stop offset="100%" stop-color="#C5EAF8" />
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#28C5D3" />
+      <stop offset="45%" stop-color="#14B1C5" />
+      <stop offset="100%" stop-color="#08899E" />
+    </linearGradient>
+    <linearGradient id="hillGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1D4E29" />
+      <stop offset="100%" stop-color="#0F3318" />
+    </linearGradient>
+    <linearGradient id="hillGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D7A41" />
+      <stop offset="100%" stop-color="#1A4A26" />
+    </linearGradient>
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B23A22" />
+      <stop offset="100%" stop-color="#7A2210" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="600" height="380" fill="url(#skyGrad)" />
+
+  <!-- Fluffy White Clouds -->
+  <g fill="#FFFFFF" opacity="0.85">
+    <circle cx="120" cy="80" r="35" />
+    <circle cx="155" cy="75" r="42" />
+    <circle cx="195" cy="82" r="32" />
+    <circle cx="160" cy="95" r="35" />
+
+    <circle cx="420" cy="65" r="30" />
+    <circle cx="450" cy="55" r="40" />
+    <circle cx="490" cy="65" r="32" />
+  </g>
+
+  <!-- Distant Jungle Hills / Island -->
+  <!-- Left large hill -->
+  <path d="M 0,220 C 60,110 180,95 280,180 C 350,230 420,190 600,240 L 600,380 L 0,380 Z" fill="url(#hillGrad1)" />
+  <!-- Overlapping foreground ridge -->
+  <path d="M 0,260 C 90,170 210,165 310,240 C 390,260 480,210 600,270 L 600,380 L 0,380 Z" fill="url(#hillGrad2)" opacity="0.9" />
+
+  <!-- Crystal Turquoise Water -->
+  <rect y="210" width="600" height="170" fill="url(#waterGrad)" />
+
+  <!-- Water ripples -->
+  <g stroke="#62E2EE" stroke-width="2" opacity="0.4" stroke-linecap="round">
+    <line x1="50" y1="230" x2="140" y2="230" />
+    <line x1="200" y1="245" x2="320" y2="245" />
+    <line x1="80" y1="270" x2="180" y2="270" />
+    <line x1="380" y1="280" x2="520" y2="280" />
+    <line x1="120" y1="310" x2="260" y2="310" />
+    <line x1="310" y1="335" x2="480" y2="335" />
+  </g>
+
+  <!-- Wooden Pier & Jetty Pavilion (Left to Center-Right) -->
+  <!-- Pier Decking -->
+  <path d="M 0,260 L 460,230 L 460,238 L 0,272 Z" fill="#8D5B4C" />
+  <path d="M 0,262 L 460,232" stroke="#AA7463" stroke-width="2" />
+  <!-- Pier Railing -->
+  <path d="M 0,248 L 460,218" stroke="#D7CCC8" stroke-width="2.5" />
+  <path d="M 0,254 L 460,224" stroke="#D7CCC8" stroke-width="1.5" />
+  <!-- Railing Posts -->
+  <g stroke="#D7CCC8" stroke-width="2">
+    <line x1="50" y1="251" x2="50" y2="264" />
+    <line x1="100" y1="247" x2="100" y2="260" />
+    <line x1="150" y1="243" x2="150" y2="256" />
+    <line x1="200" y1="240" x2="200" y2="252" />
+    <line x1="250" y1="236" x2="250" y2="248" />
+    <line x1="300" y1="232" x2="300" y2="244" />
+    <line x1="350" y1="228" x2="350" y2="240" />
+    <line x1="400" y1="225" x2="400" y2="236" />
+    <line x1="440" y1="222" x2="440" y2="233" />
+  </g>
+
+  <!-- Pier Stilts in Water -->
+  <g stroke="#4E342E" stroke-width="5" stroke-linecap="round">
+    <line x1="60" y1="268" x2="60" y2="310" />
+    <line x1="120" y1="264" x2="120" y2="300" />
+    <line x1="180" y1="260" x2="180" y2="290" />
+    <line x1="240" y1="255" x2="240" y2="280" />
+    <line x1="300" y1="250" x2="300" y2="275" />
+    <line x1="360" y1="245" x2="360" y2="270" />
+    <line x1="420" y1="240" x2="420" y2="265" />
+  </g>
+
+  <!-- Jetty Covered Pavilion at End of Pier -->
+  <!-- Stilts -->
+  <g stroke="#3E2723" stroke-width="6">
+    <line x1="450" y1="235" x2="450" y2="285" />
+    <line x1="475" y1="235" x2="475" y2="285" />
+    <line x1="500" y1="235" x2="500" y2="285" />
+    <line x1="525" y1="235" x2="525" y2="285" />
+  </g>
+  <!-- Platform -->
+  <rect x="440" y="225" width="95" height="12" fill="#5D4037" rx="2" />
+  <!-- Pillars -->
+  <rect x="448" y="195" width="5" height="30" fill="#EFEBE9" />
+  <rect x="470" y="195" width="5" height="30" fill="#EFEBE9" />
+  <rect x="495" y="195" width="5" height="30" fill="#EFEBE9" />
+  <rect x="520" y="195" width="5" height="30" fill="#EFEBE9" />
+  <!-- Red Malay Gable Roof -->
+  <polygon points="430,200 488,165 545,200" fill="url(#roofGrad)" />
+  <polygon points="432,198 488,167 543,198" fill="#D32F2F" opacity="0.3" />
+
+  <!-- Tropical Palm Fronds foreground corner -->
+  <g stroke="#1B5E20" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M 0,380 Q 50,330 110,310" />
+    <path d="M 10,365 Q 60,320 85,300" />
+    <path d="M 30,375 Q 85,335 130,330" />
+  </g>
+</svg>

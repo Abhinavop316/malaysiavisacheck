@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="240" height="50">
+  <rect width="240" height="50" fill="#ffffff" />
+  <g fill="#000000">
+    <rect x="10" y="5" width="3" height="32" />
+    <rect x="15" y="5" width="2" height="32" />
+    <rect x="20" y="5" width="5" height="32" />
+    <rect x="28" y="5" width="1" height="32" />
+    <rect x="32" y="5" width="4" height="32" />
+    <rect x="39" y="5" width="2" height="32" />
+    <rect x="44" y="5" width="3" height="32" />
+    <rect x="50" y="5" width="5" height="32" />
+    <rect x="58" y="5" width="2" height="32" />
+    <rect x="63" y="5" width="3" height="32" />
+    <rect x="69" y="5" width="1" height="32" />
+    <rect x="73" y="5" width="4" height="32" />
+    <rect x="80" y="5" width="2" height="32" />
+    <rect x="85" y="5" width="6" height="32" />
+    <rect x="94" y="5" width="2" height="32" />
+    <rect x="99" y="5" width="3" height="32" />
+    <rect x="105" y="5" width="1" height="32" />
+    <rect x="109" y="5" width="4" height="32" />
+    <rect x="116" y="5" width="2" height="32" />
+    <rect x="121" y="5" width="5" height="32" />
+    <rect x="129" y="5" width="2" height="32" />
+    <rect x="134" y="5" width="4" height="32" />
+    <rect x="141" y="5" width="1" height="32" />
+    <rect x="145" y="5" width="3" height="32" />
+    <rect x="151" y="5" width="5" height="32" />
+    <rect x="159" y="5" width="2" height="32" />
+    <rect x="164" y="5" width="4" height="32" />
+    <rect x="171" y="5" width="2" height="32" />
+    <rect x="176" y="5" width="3" height="32" />
+    <rect x="182" y="5" width="1" height="32" />
+    <rect x="186" y="5" width="5" height="32" />
+    <rect x="194" y="5" width="2" height="32" />
+    <rect x="199" y="5" width="4" height="32" />
+    <rect x="206" y="5" width="2" height="32" />
+    <rect x="211" y="5" width="4" height="32" />
+    <rect x="218" y="5" width="2" height="32" />
+    <rect x="223" y="5" width="5" height="32" />
+  </g>
+  <text x="120" y="46" font-family="monospace" font-size="9" text-anchor="middle" fill="#333333" letter-spacing="2">MY-EVISA-VERIFY-2026</text>
+</svg>

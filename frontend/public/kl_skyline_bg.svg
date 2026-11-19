@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 450" width="1440" height="450">
+  <defs>
+    <linearGradient id="skyDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#142436" />
+      <stop offset="50%" stop-color="#17273B" />
+      <stop offset="100%" stop-color="#111C2B" />
+    </linearGradient>
+    <radialGradient id="towerBackGlow" cx="20%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E0F2FE" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#142436" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1440" height="450" fill="url(#skyDark)" />
+  <rect width="1440" height="450" fill="url(#towerBackGlow)" />
+
+  <!-- Background Ambient Petronas Silhouette behind Left Text (approx x=200-350) -->
+  <g fill="#0D1926" opacity="0.45">
+    <!-- Left building blocks -->
+    <rect x="0" y="240" width="80" height="210" />
+    <rect x="70" y="210" width="60" height="240" />
+    <rect x="120" y="260" width="55" height="190" />
+
+    <!-- Ambient Twin Tower 1 -->
+    <path d="M 220,450 L 225,120 L 245,120 L 250,450 Z" />
+    <polygon points="230,120 235,50 240,120" />
+    <line x1="235" y1="50" x2="235" y2="10" stroke="#0D1926" stroke-width="2" />
+
+    <!-- Ambient Twin Tower 2 -->
+    <path d="M 265,450 L 270,120 L 290,120 L 295,450 Z" />
+    <polygon points="275,120 280,50 285,120" />
+    <line x1="280" y1="50" x2="280" y2="10" stroke="#0D1926" stroke-width="2" />
+
+    <!-- Ambient Skybridge -->
+    <rect x="245" y="260" width="25" height="12" />
+
+    <!-- Right surrounding building blocks -->
+    <rect x="330" y="230" width="70" height="220" />
+    <rect x="390" y="280" width="80" height="170" />
+    <rect x="460" y="200" width="90" height="250" />
+  </g>
+
+  <!-- Distant warm yellow window dots -->
+  <g fill="#FFD54F" opacity="0.15">
+    <circle cx="230" cy="180" r="1.5" />
+    <circle cx="240" cy="200" r="1.5" />
+    <circle cx="275" cy="180" r="1.5" />
+    <circle cx="285" cy="220" r="1.5" />
+    <circle cx="232" cy="290" r="1.5" />
+    <circle cx="282" cy="300" r="1.5" />
+    <circle cx="90" cy="240" r="1.5" />
+    <circle cx="480" cy="230" r="1.5" />
+  </g>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <!-- "MY" in deep navy blue -->
+  <text x="48" y="38" font-family="'Montserrat', 'Outfit', 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="36" fill="#0E2A47" letter-spacing="-1">
+    MY
+  </text>
+
+  <!-- "V" in Red -->
+  <text x="108" y="38" font-family="'Montserrat', 'Outfit', 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="36" fill="#D32F2F" letter-spacing="-1">
+    V
+  </text>
+
+  <!-- "I" in Red -->
+  <text x="133" y="38" font-family="'Montserrat', 'Outfit', 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="36" fill="#D32F2F">
+    I
+  </text>
+
+  <!-- Star / Flower Motif over the 'I' -->
+  <g transform="translate(138, 13) scale(0.48)">
+    <circle r="4" fill="#FFD54F" />
+    <ellipse cx="0" cy="-11" rx="4.5" ry="7" fill="#D32F2F" />
+    <ellipse cx="0" cy="11" rx="4.5" ry="7" fill="#D32F2F" />
+    <ellipse cx="-11" cy="0" rx="7" ry="4.5" fill="#D32F2F" />
+    <ellipse cx="11" cy="0" rx="7" ry="4.5" fill="#D32F2F" />
+    <ellipse cx="-7.5" cy="-7.5" rx="5" ry="7" fill="#F4B41A" transform="rotate(45, -7.5, -7.5)" />
+    <ellipse cx="7.5" cy="7.5" rx="5" ry="7" fill="#F4B41A" transform="rotate(45, 7.5, 7.5)" />
+    <ellipse cx="7.5" cy="-7.5" rx="5" ry="7" fill="#F4B41A" transform="rotate(-45, 7.5, -7.5)" />
+    <ellipse cx="-7.5" cy="7.5" rx="5" ry="7" fill="#F4B41A" transform="rotate(-45, -7.5, 7.5)" />
+    <circle r="3.5" fill="#FFD54F" />
+  </g>
+
+  <!-- "SA" in Red -->
+  <text x="146" y="38" font-family="'Montserrat', 'Outfit', 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="36" fill="#D32F2F" letter-spacing="-1">
+    SA
+  </text>
+
+  <!-- "MALAYSIA VISA" below -->
+  <text x="118" y="52" text-anchor="middle" font-family="'Montserrat', 'Outfit', sans-serif" font-weight="700" font-size="8.5" letter-spacing="3.5">
+    <tspan fill="#F4B41A">MAL</tspan>
+    <tspan fill="#D32F2F">AYSIA</tspan>
+    <tspan fill="#0E2A47"> VISA</tspan>
+  </text>
+</svg>

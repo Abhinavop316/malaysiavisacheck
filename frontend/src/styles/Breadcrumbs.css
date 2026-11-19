@@ -1,0 +1,43 @@
+.my-breadcrumbs {
+  width: 100%;
+  background: #f1f5f9;
+  border-bottom: 1px solid var(--my-border-color);
+  padding: 0.5rem 0;
+  font-size: 0.8125rem;
+}
+
+.my-breadcrumbs__inner {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.my-breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.my-breadcrumbs__link {
+  color: var(--my-navy);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.my-breadcrumbs__link:hover {
+  color: var(--my-blue-accent);
+  text-decoration: underline;
+}
+
+.my-breadcrumbs__sep {
+  color: var(--my-text-light);
+  user-select: none;
+}
+
+.my-breadcrumbs__current {
+  color: var(--my-text-muted);
+  font-weight: 600;
+}

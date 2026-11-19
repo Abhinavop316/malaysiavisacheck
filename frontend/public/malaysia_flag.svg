@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" width="560" height="280">
+  <defs>
+    <!-- 14-pointed star definition -->
+    <path id="star14" fill="#fcdd09" d="M 0,-52 L 5.8,-21.8 L 22.8,-46.8 L 16.5,-16.1 L 38.3,-35.1 L 24.8,-8.5 L 48.9,-18.2 L 29.5,-0.1 L 52,0.5 L 30,-8.5 L 48.9,18.2 L 24.8,8.5 L 38.3,35.1 L 16.5,16.1 L 22.8,46.8 L 5.8,21.8 L 0,52 L -5.8,21.8 L -22.8,46.8 L -16.5,16.1 L -38.3,35.1 L -24.8,8.5 L -48.9,18.2 L -29.5,-0.1 L -52,-0.5 L -30,8.5 L -48.9,-18.2 L -24.8,-8.5 L -38.3,-35.1 L -16.5,-16.1 L -22.8,-46.8 L -5.8,-21.8 Z" />
+  </defs>
+
+  <!-- 14 Stripes: alternating Red and White (each 20px high) -->
+  <rect width="560" height="280" fill="#ffffff" />
+  <rect y="0" width="560" height="20" fill="#cc0000" />
+  <rect y="40" width="560" height="20" fill="#cc0000" />
+  <rect y="80" width="560" height="20" fill="#cc0000" />
+  <rect y="120" width="560" height="20" fill="#cc0000" />
+  <rect y="160" width="560" height="20" fill="#cc0000" />
+  <rect y="200" width="560" height="20" fill="#cc0000" />
+  <rect y="240" width="560" height="20" fill="#cc0000" />
+
+  <!-- Blue Canton: 280px wide (half width), 160px high (top 8 stripes) -->
+  <rect width="280" height="160" fill="#000066" />
+
+  <!-- Yellow Crescent -->
+  <!-- Outer circle radius 52 at cx=120, cy=80 -->
+  <!-- Inner cutout circle radius 45 at cx=134, cy=80 -->
+  <path fill="#fcdd09" d="M 120 28 A 52 52 0 1 0 120 132 A 45 45 0 1 1 120 28 Z" />
+
+  <!-- 14-Point Star centered at cx=175, cy=80 -->
+  <g transform="translate(175, 80)">
+    <!-- 14 rays radiating uniformly -->
+    <!-- ray 0 deg -->
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(25.714)" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(51.428)" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(77.142)" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(102.856)" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(128.570)" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(154.284)" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(179.998)" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(205.712)" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(231.426)" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(257.140)" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(282.854)" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(308.568)" />
+    <polygon fill="#fcdd09" points="0,-50 4,-16 0,0 -4,-16" transform="rotate(334.282)" />
+    <circle r="16" fill="#fcdd09" />
+  </g>
+</svg>

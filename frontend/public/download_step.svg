@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="officeBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="240" fill="url(#officeBg)" />
+
+  <!-- Coffee Mug & Documents on Desk -->
+  <rect x="0" y="160" width="400" height="80" fill="#CBD5E1" />
+  <!-- Coffee Cup -->
+  <rect x="50" y="130" width="22" height="30" rx="3" fill="#334155" />
+  <path d="M 72,137 C 80,137 80,150 72,150" fill="none" stroke="#334155" stroke-width="2.5" />
+
+  <!-- Laptop on Desk -->
+  <polygon points="120,135 240,135 270,195 90,195" fill="#475569" />
+  <polygon points="135,50 225,50 238,135 122,135" fill="#0F172A" />
+  <polygon points="140,55 220,55 233,130 127,130" fill="#0284C7" />
+  <!-- Download arrow on screen -->
+  <circle cx="180" cy="92" r="16" fill="#10B981" />
+  <path d="M 180,82 L 180,100 M 174,94 L 180,100 L 186,94" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Person sitting (from behind/side) -->
+  <!-- White shirt / torso -->
+  <path d="M 280,240 C 270,160 300,100 340,90 C 370,100 390,160 380,240 Z" fill="#FFFFFF" stroke="#E2E8F0" />
+  <!-- Head with short dark hair & glasses -->
+  <circle cx="330" cy="70" r="22" fill="#FBCFE8" />
+  <path d="M 315,62 C 320,48 348,48 350,65 C 335,60 325,58 315,62 Z" fill="#1E293B" />
+  <!-- Glasses arm -->
+  <line x1="318" y1="68" x2="330" y2="68" stroke="#1E293B" stroke-width="2" />
+</svg>

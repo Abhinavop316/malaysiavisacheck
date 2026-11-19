@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380">
+  <defs>
+    <!-- Warm Golden Hour Sunset Sky Gradient -->
+    <linearGradient id="eagleSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3A6384" />
+      <stop offset="35%" stop-color="#6F9EB8" />
+      <stop offset="70%" stop-color="#F7C48D" />
+      <stop offset="100%" stop-color="#FEDBB0" />
+    </linearGradient>
+
+    <!-- Calm Andaman Sea Gradient -->
+    <linearGradient id="eagleSea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D8593" />
+      <stop offset="40%" stop-color="#236F7C" />
+      <stop offset="100%" stop-color="#154B54" />
+    </linearGradient>
+
+    <!-- Mountain Island Silhouette Gradients -->
+    <linearGradient id="mountGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#415967" />
+      <stop offset="100%" stop-color="#23323B" />
+    </linearGradient>
+    <linearGradient id="mountGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2E4F36" />
+      <stop offset="100%" stop-color="#172C1E" />
+    </linearGradient>
+
+    <!-- Eagle Terracotta / Copper Gradient -->
+    <linearGradient id="eagleCopper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D8602E" />
+      <stop offset="45%" stop-color="#A53E17" />
+      <stop offset="100%" stop-color="#5C1F0A" />
+    </linearGradient>
+
+    <!-- Star Pier Marble Promenade -->
+    <linearGradient id="pierGrad" x1="0%" y1="0%" x2="100%" y2="60%">
+      <stop offset="0%" stop-color="#ECEFF1" />
+      <stop offset="60%" stop-color="#CFD8DC" />
+      <stop offset="100%" stop-color="#90A4AE" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="600" height="380" fill="url(#eagleSky)" />
+
+  <!-- Soft Golden Horizon Glow -->
+  <ellipse cx="460" cy="190" rx="140" ry="60" fill="#FFF3E0" opacity="0.65" filter="blur(18px)" />
+
+  <!-- Distant Langkawi Islands & Hills -->
+  <path d="M 0,215 C 30,165 75,160 115,195 C 160,180 210,165 270,215 L 270,265 L 0,265 Z" fill="url(#mountGrad1)" opacity="0.9" />
+  <path d="M 370,215 C 430,188 510,182 600,210 L 600,265 L 370,265 Z" fill="url(#mountGrad1)" opacity="0.9" />
+
+  <!-- Foreground Forested Ridge (Left) -->
+  <path d="M 0,232 C 45,182 95,178 155,225 C 205,235 235,220 275,242 L 275,275 L 0,275 Z" fill="url(#mountGrad2)" />
+
+  <!-- Calm Sea Water -->
+  <rect y="215" width="600" height="165" fill="url(#eagleSea)" />
+
+  <!-- Distant Yachts & Ferry Boats on the Bay -->
+  <g fill="#FFFFFF">
+    <!-- Yacht 1 -->
+    <polygon points="410,216 414,211 414,216" />
+    <path d="M 407,216 L 416,216 L 414,218 L 408,218 Z" fill="#E65100" />
+    <!-- Yacht 2 -->
+    <polygon points="460,217 465,212 465,217" />
+    <path d="M 458,217 L 467,217 L 465,219 L 459,219 Z" fill="#FFFFFF" />
+    <!-- Ferry / Catamaran -->
+    <rect x="515" y="221" width="16" height="4" fill="#FFFFFF" rx="1" />
+    <line x1="495" y1="225" x2="515" y2="225" stroke="#FFF" stroke-width="1.5" opacity="0.6" />
+  </g>
+
+  <!-- Golden Sunset Reflections on the Waves -->
+  <g stroke="#FFE082" stroke-width="1.5" opacity="0.45" stroke-linecap="round">
+    <line x1="380" y1="230" x2="490" y2="230" />
+    <line x1="350" y1="246" x2="530" y2="246" />
+    <line x1="310" y1="268" x2="570" y2="268" />
+    <line x1="270" y1="295" x2="590" y2="295" />
+  </g>
+
+  <!-- Star-Shaped Jetty / Promenade Over the Water (Dataran Lang Pier) -->
+  <!-- Concrete Support Pillars in Sea -->
+  <g stroke="#1E282D" stroke-width="5" stroke-linecap="round">
+    <line x1="250" y1="285" x2="250" y2="335" />
+    <line x1="305" y1="290" x2="305" y2="340" />
+    <line x1="360" y1="285" x2="360" y2="335" />
+    <line x1="410" y1="275" x2="410" y2="325" />
+    <line x1="455" y1="265" x2="455" y2="310" />
+  </g>
+
+  <!-- Star Platform Marble Decking -->
+  <polygon points="205,290 275,265 370,250 465,265 475,285 390,322 275,338 215,315" fill="url(#pierGrad)" />
+  <!-- Terracotta Star Outline Motif -->
+  <polygon points="210,290 275,267 368,253 460,267 470,283 388,318 276,334 219,313" fill="none" stroke="#E65100" stroke-width="2.5" />
+  <!-- White Railing -->
+  <path d="M 205,285 L 275,260 L 370,245 L 465,260 L 475,280" fill="none" stroke="#FFFFFF" stroke-width="3" />
+  <path d="M 205,280 L 275,255 L 370,240 L 465,255 L 475,275" fill="none" stroke="#FFFFFF" stroke-width="2" />
+
+  <!-- Pedestal Rock for Eagle -->
+  <path d="M 250,278 Q 295,245 340,278 L 350,288 L 240,288 Z" fill="#37474F" />
+
+  <!-- LANGKAWI EAGLE STATUE (Helang) -->
+  <!-- Left Wing (Arched Upward & Majestic) -->
+  <path d="M 265,225 C 235,160 205,135 195,160 C 185,185 225,218 268,240 Z" fill="url(#eagleCopper)" />
+  <path d="M 200,155 C 215,180 242,208 272,225" stroke="#FFAB91" stroke-width="2" fill="none" />
+  <!-- Wing Feather Tips -->
+  <path d="M 195,160 C 190,170 200,180 210,175" fill="url(#eagleCopper)" />
+  <path d="M 200,173 C 195,185 210,194 220,190" fill="url(#eagleCopper)" />
+  <path d="M 210,188 C 205,200 222,208 232,204" fill="url(#eagleCopper)" />
+
+  <!-- Right Wing (Extended Forward & High) -->
+  <path d="M 295,215 C 318,148 335,122 350,148 C 360,175 328,210 295,235 Z" fill="url(#eagleCopper)" />
+  <path d="M 345,142 C 335,168 312,200 290,220" stroke="#FFAB91" stroke-width="2" fill="none" />
+  <!-- Right Wing Feathers -->
+  <path d="M 350,148 C 358,158 348,170 338,165" fill="url(#eagleCopper)" />
+  <path d="M 344,163 C 352,175 340,185 330,180" fill="url(#eagleCopper)" />
+  <path d="M 334,178 C 340,190 326,200 316,194" fill="url(#eagleCopper)" />
+
+  <!-- Eagle Torso & Tail (Rich Terracotta/Brown) -->
+  <path d="M 265,210 C 260,248 275,268 295,268 C 315,268 320,242 308,210 Z" fill="url(#eagleCopper)" />
+
+  <!-- Eagle White Breast & Neck Feathers (Brahminy Kite characteristic) -->
+  <path d="M 274,212 C 276,188 304,188 308,212 C 304,238 276,238 274,212 Z" fill="#FFFFFF" />
+
+  <!-- Eagle Head & Beak facing Right towards the sea -->
+  <path d="M 292,188 C 292,176 307,176 310,188 C 318,190 324,195 326,200 C 320,202 314,200 308,197 Z" fill="#FFFDE7" />
+  <path d="M 314,195 C 326,198 326,205 318,205 Z" fill="#F57F17" /> <!-- Curved Beak -->
+  <circle cx="304" cy="186" r="2.5" fill="#212121" /> <!-- Eye -->
+
+  <!-- Eagle Claws on Rock -->
+  <path d="M 272,267 L 267,276 M 280,268 L 278,277 M 302,267 L 308,276 M 310,267 L 316,275" stroke="#FFD54F" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Water Reflection Under Pier -->
+  <ellipse cx="325" cy="348" rx="85" ry="12" fill="#113F47" opacity="0.65" />
+</svg>

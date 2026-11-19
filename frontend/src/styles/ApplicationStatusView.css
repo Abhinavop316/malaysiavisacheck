@@ -1,0 +1,321 @@
+/* MALAYSIA eVISA - VERIFIED STATUS VIEW (1:1 REPLICATION OF USER IMAGE 2) */
+
+.my-verified-page {
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  background: #f8fafc;
+  padding: 2.25rem 1rem 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+}
+
+.my-verified-container {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+/* 1. TOP HEADER BAR (SOLID NAVY WITH JATA NEGARA & DIVIDER) */
+.my-verified-header-bar {
+  background: #012856;
+  border-radius: 6px 6px 0 0;
+  padding: 1.1rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.my-verified-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.my-verified-crest {
+  width: 50px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.my-verified-dept-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-verified-dept-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+}
+
+.my-verified-portal-tag {
+  font-size: 0.77rem;
+  color: #93c5fd;
+  font-weight: 500;
+  margin-top: 3px;
+  letter-spacing: 0.01em;
+}
+
+.my-verified-divider {
+  width: 1.5px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.35);
+  margin: 0 1.25rem;
+}
+
+.my-verified-header-right {
+  flex-shrink: 0;
+}
+
+.my-verified-header-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin: 0;
+  font-family: inherit;
+}
+
+/* 2. MAIN CARD BODY */
+.my-verified-card {
+  background: #ffffff;
+  border: 1px solid #dce4ec;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  padding: 1.75rem 2rem 2.25rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* 3. GREEN SUCCESS CALLOUT ALERT */
+.my-verified-success-banner {
+  background: #eaf7ec;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.my-verified-check-circle {
+  width: 38px;
+  height: 38px;
+  background: #188639;
+  border-radius: 50%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(24, 134, 57, 0.25);
+}
+
+.my-verified-success-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-verified-success-title {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #145a27;
+  margin: 0 0 3px 0;
+  letter-spacing: -0.01em;
+}
+
+.my-verified-success-desc {
+  font-size: 0.9rem;
+  color: #1b6a32;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* 4. VERIFICATION PARTICULARS TABLE (EXACT MATCH WITH IMAGE 2) */
+.my-verified-table-wrap {
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+}
+
+.my-verified-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.my-verified-table tbody tr {
+  border-bottom: 1px solid #eef2f6;
+}
+
+.my-verified-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.my-verified-table th {
+  width: 38%;
+  background-color: #f7fafc;
+  color: #012856; /* Navy blue labels matching image */
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.82rem 1.25rem;
+  text-align: left;
+  border-right: 1px solid #edf2f7;
+  letter-spacing: 0.01em;
+}
+
+.my-verified-table td {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-weight: 600;
+  padding: 0.82rem 1.25rem;
+}
+
+/* Green Status Pill Badge */
+.my-verified-status-pill {
+  display: inline-block;
+  background-color: #108638;
+  color: #ffffff;
+  padding: 0.32rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* 5. ACTION BUTTONS (PRINT RESULT & BACK TO VERIFICATION) */
+.my-verified-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.15rem;
+  margin-top: 1.5rem;
+}
+
+.my-verified-btn {
+  padding: 0.82rem 1.25rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: inherit;
+  transition: all 0.15s ease;
+  line-height: 1.2;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.my-verified-btn--print {
+  background: #ffffff;
+  border: 1.75px solid #012856;
+  color: #012856;
+}
+
+.my-verified-btn--print:hover:not(:disabled) {
+  background: #f1f5fa;
+  border-color: #001d42;
+}
+
+.my-verified-btn--back {
+  background: #012856;
+  border: 1.75px solid #012856;
+  color: #ffffff;
+}
+
+.my-verified-btn--back:hover {
+  background: #001d42;
+  border-color: #001d42;
+}
+
+.my-verified-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.my-btn-spinner {
+  animation: my-spin 1s linear infinite;
+}
+
+@keyframes my-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 6. COPYRIGHT FOOTER */
+.my-verified-copyright {
+  text-align: center;
+  font-size: 0.825rem;
+  color: #64748b;
+  margin-top: 2.25rem;
+  font-weight: 400;
+}
+
+/* Off-screen container for high-fidelity PDF capture */
+.my-pdf-hidden-render {
+  position: fixed;
+  top: 0;
+  left: -99999px;
+  width: 794px;
+  z-index: -99999;
+  pointer-events: none;
+  opacity: 1;
+}
+
+@media print {
+  .my-pdf-hidden-render {
+    display: none !important;
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .my-verified-header-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .my-verified-header-left {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .my-verified-divider {
+    display: none;
+  }
+
+  .my-verified-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .my-verified-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .my-verified-table th {
+    width: 44%;
+    padding: 0.65rem 0.85rem;
+  }
+
+  .my-verified-table td {
+    padding: 0.65rem 0.85rem;
+  }
+}

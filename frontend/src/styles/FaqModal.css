@@ -1,0 +1,140 @@
+.my-faq-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.my-faq-modal__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 37, 69, 0.65);
+  backdrop-filter: blur(4px);
+}
+
+.my-faq-modal__dialog {
+  position: relative;
+  background: #ffffff;
+  border-radius: 8px;
+  width: min(720px, 100%);
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--my-border-color);
+  overflow: hidden;
+  z-index: 10;
+  animation: my-modal-pop 0.2s ease-out;
+}
+
+@keyframes my-modal-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.my-faq-modal__header {
+  background: #f8fafc;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--my-border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-faq-modal__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.my-faq-modal__crest {
+  width: 40px;
+  height: 40px;
+}
+
+.my-faq-modal__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--my-navy);
+  margin: 0;
+}
+
+.my-faq-modal__sub {
+  font-size: 0.75rem;
+  color: var(--my-text-muted);
+}
+
+.my-faq-modal__close {
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  color: var(--my-text-muted);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 0.25rem;
+  transition: color 0.15s;
+}
+
+.my-faq-modal__close:hover {
+  color: var(--my-red);
+}
+
+.my-faq-modal__content {
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.my-faq-item {
+  background: #f8fafc;
+  border: 1px solid var(--my-border-color);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+}
+
+.my-faq-item__question {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--my-navy);
+  margin: 0 0 0.5rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.my-faq-item__num {
+  color: var(--my-gold);
+}
+
+.my-faq-item__answer {
+  font-size: 0.875rem;
+  color: var(--my-text-main);
+  line-height: 1.55;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.my-faq-modal__footer {
+  background: #f8fafc;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--my-border-color);
+  display: flex;
+  justify-content: flex-end;
+}

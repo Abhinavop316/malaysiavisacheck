@@ -1,0 +1,439 @@
+/* EXACT OFFICIAL MALAYSIA eVISA A4 CERTIFICATE DOCUMENT (MATCHES USER IMAGE 1:1) */
+
+.my-official-evisa-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0 3rem;
+  width: 100%;
+}
+
+/* Download / Print Toolbar */
+.my-evisa-action-bar {
+  width: min(820px, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.my-evisa-action-bar__info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.my-evisa-download-btn {
+  background: #012f61;
+  color: #ffffff;
+  border: none;
+  padding: 0.55rem 1.25rem;
+  border-radius: 4px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.15s ease;
+  font-family: inherit;
+}
+
+.my-evisa-download-btn:hover {
+  background: #022045;
+}
+
+/* Spinner */
+.my-evisa-spinner {
+  animation: my-spin 1s linear infinite;
+}
+
+@keyframes my-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* The Exact A4 Document Sheet */
+.my-evisa-a4-sheet {
+  width: 794px;
+  max-width: 100%;
+  background: #ffffff;
+  border: none;
+  box-shadow: none;
+  padding: 1.5rem 2rem 1.75rem;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  position: relative;
+  overflow: hidden;
+  page-break-inside: avoid;
+  page-break-after: avoid;
+  break-inside: avoid;
+  margin: 0 auto;
+}
+
+/* 1. TOP HEADER */
+.my-evisa-sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.35rem;
+}
+
+.my-evisa-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.my-evisa-jata-crest {
+  width: 68px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.my-evisa-jata-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-evisa-title-main {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.15;
+}
+
+.my-evisa-title-sub {
+  font-size: 0.78rem;
+  color: #4b5563;
+  margin-top: 2px;
+}
+
+.my-evisa-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.my-evisa-logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-evisa-flag-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.my-evisa-malaysia-sub {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  letter-spacing: 0.32em;
+  margin-top: 2px;
+  text-indent: 0.32em; /* Centers the widely tracked letters */
+}
+
+.my-evisa-serial-num {
+  font-size: 0.7rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+/* 2. MIDDLE BANNER: QR Code (Left) + Center Immigration Notice */
+.my-evisa-middle-banner {
+  display: flex;
+  align-items: center;
+  margin: 0.85rem 0 1.25rem;
+  gap: 1.5rem;
+}
+
+.my-evisa-qr-col {
+  width: 135px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-evisa-center-notice-col {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2rem;
+}
+
+.my-evisa-jim-crest {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 0.35rem;
+}
+
+.my-evisa-dept-headline {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: 0.02em;
+  margin: 0 0 2px 0;
+}
+
+.my-evisa-act-citation {
+  font-size: 0.8125rem;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.my-evisa-entry-type {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: 0.04em;
+  margin: 2px 0 6px 0;
+}
+
+.my-evisa-journey-condition {
+  font-size: 0.8125rem;
+  color: #111827;
+  line-height: 1.35;
+  max-width: 460px;
+  margin: 0;
+}
+
+/* 3. SECTION SUBHEADING + BLACK SOLID LINE */
+.my-evisa-section-lead {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 0.35rem 0;
+}
+
+.my-evisa-black-divider {
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  margin-bottom: 1.25rem;
+}
+
+/* 4. MAIN BODY (LEFT PARTICULARS + RIGHT PHOTO & BARCODE) */
+.my-evisa-body-wrap {
+  position: relative;
+  min-height: 380px;
+}
+
+/* Watermark Crest in Background */
+.my-evisa-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  height: 360px;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.my-evisa-body-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Left Particulars Grid */
+.my-evisa-left-particulars {
+  flex: 1;
+}
+
+.my-evisa-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.my-evisa-data-table td {
+  padding: 0.22rem 0;
+  vertical-align: top;
+}
+
+.my-evisa-field-label {
+  width: 145px;
+  color: #000000;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.my-evisa-field-value {
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Right Column: Photo + Barcode at Exact Positions */
+.my-evisa-right-security {
+  width: 175px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+/* Applicant Photo */
+.my-evisa-photo-box {
+  width: 105px;
+  height: 130px;
+  border: 1px solid #111827;
+  background: #ffffff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.35rem;
+}
+
+.my-evisa-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.my-evisa-photo-none {
+  font-size: 0.65rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* Passport Number printed directly under photo */
+.my-evisa-passport-tag {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+/* Barcode positioned directly below photo */
+.my-evisa-barcode-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 5. DISCLAIMER BOX */
+.my-evisa-disclaimer-card {
+  background-color: #f1f3f5;
+  border-radius: 4px;
+  padding: 0.9rem 1.15rem;
+  margin-top: 1.5rem;
+  font-size: 0.6875rem;
+  line-height: 1.45;
+  color: #111827;
+}
+
+.my-evisa-disclaimer-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #000000;
+  margin: 0 0 0.35rem 0;
+  letter-spacing: 0.02em;
+}
+
+.my-evisa-disclaimer-text {
+  margin: 0 0 0.5rem 0;
+}
+
+.my-evisa-disclaimer-text:last-child {
+  margin-bottom: 0;
+}
+
+.my-evisa-version-tag {
+  font-size: 0.625rem;
+  color: #9ca3af;
+  text-align: right;
+  margin-top: 0.35rem;
+  font-weight: 600;
+}
+
+/* PRINT & A4 PAGE STYLES */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .my-official-evisa-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .my-evisa-a4-sheet {
+    width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .my-evisa-a4-sheet {
+    padding: 1.25rem;
+  }
+
+  .my-evisa-middle-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .my-evisa-center-notice-col {
+    padding-right: 0;
+  }
+
+  .my-evisa-body-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .my-evisa-right-security {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}

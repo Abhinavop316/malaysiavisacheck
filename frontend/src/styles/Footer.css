@@ -1,0 +1,190 @@
+.my-footer {
+  width: 100%;
+  background: #334e68;
+  color: #cbd5e1;
+  padding: 3rem 0 2rem;
+  font-family: 'Open Sans', -apple-system, sans-serif;
+  position: relative;
+}
+
+.my-footer__inner {
+  width: min(1720px, calc(100% - 3.5rem));
+  margin: 0 auto;
+}
+
+/* Top Row */
+.my-footer__top-row {
+  display: grid;
+  grid-template-columns: 180px 180px 1fr;
+  gap: 3.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  align-items: flex-start;
+}
+
+.my-footer__brand-col {
+  display: flex;
+  align-items: flex-start;
+}
+
+.my-footer__logo {
+  height: 34px;
+  width: auto;
+  max-width: 145px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+}
+
+/* Script Titles */
+.my-footer__script-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.1rem;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0 0 1rem;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+/* Link Lists */
+.my-footer__link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.my-footer__link-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #cbd5e1;
+  font-size: 0.8125rem;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.my-footer__link-btn:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.my-footer__link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  transition: color 0.15s ease;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.my-footer__link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Reference Links 3-Subcolumn Grid */
+.my-footer__ref-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.my-footer__ref-subcol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+/* Bottom Bar */
+.my-footer__bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.75rem;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.my-footer__copyright {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.my-footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.my-footer__social-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.my-footer__social-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.my-footer__social-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Floating Scroll to Top Button (above live chat agent) */
+.my-footer__scroll-top {
+  position: fixed;
+  bottom: 86px;
+  right: 27px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #243548;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 998;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+}
+
+.my-footer__scroll-top:hover {
+  background: #1a2634;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.my-footer__arrow-top {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  .my-footer__top-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .my-footer__ref-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
