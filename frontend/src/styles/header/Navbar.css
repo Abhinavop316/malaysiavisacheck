@@ -3,6 +3,8 @@
   background: #ffffff;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 100;
 }
 
 /* Top Brand Bar (White) */
@@ -74,7 +76,7 @@
 /* Sub-nav Bar (Pale cyan background #E2F1F8) */
 .my-header__nav {
   background: #e2f1f8;
-  border-bottom: none;
+  border-bottom: 1px solid #d4e8f1;
   padding: 0.35rem 0;
   margin: 0;
 }
@@ -86,6 +88,25 @@
   justify-content: flex-end;
   align-items: center;
   gap: 1.75rem;
+}
+
+/* Mobile status label (hidden on desktop) */
+.my-header__mobile-status-pill {
+  display: none;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #012f61;
+  letter-spacing: 0.02em;
+}
+
+.my-header__status-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
 }
 
 .my-header__nav-links {
@@ -127,6 +148,13 @@
 .my-header__nav-item--active-sub {
   color: #0b2545;
   font-weight: 700;
+}
+
+/* Right Controls (Auth slot + Mobile Hamburger) */
+.my-header__right-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 /* Admin Login Button Slot */
@@ -174,6 +202,7 @@
 .my-header__lock-icon {
   width: 13px;
   height: 13px;
+  flex-shrink: 0;
 }
 
 .my-header__admin-pill-group {
@@ -201,9 +230,281 @@
   color: #b91c1c;
 }
 
+/* 3-Bar Hamburger Menu Button (Hidden on Desktop) */
+.my-header__hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 34px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #c5dbe6;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.my-header__hamburger-btn:hover {
+  background: #f0f7fa;
+  border-color: #012f61;
+}
+
+.my-header__hamburger-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #012f61;
+  border-radius: 2px;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+}
+
+/* Hamburger open state -> morph into X */
+.my-header__hamburger-btn--open .my-header__hamburger-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.my-header__hamburger-btn--open .my-header__hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.my-header__hamburger-btn--open .my-header__hamburger-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Mobile Drawer Backdrop */
+.my-header__mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 998;
+  animation: myFadeIn 0.2s ease;
+}
+
+@keyframes myFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Mobile Drawer Panel (Slides out from right) */
+.my-header__mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(340px, 86vw);
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: -6px 0 28px rgba(0, 0, 0, 0.22);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.my-header__mobile-drawer--open {
+  transform: translateX(0);
+}
+
+.my-header__mobile-drawer-header {
+  padding: 1.15rem 1.25rem;
+  background: #012f61;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #002247;
+}
+
+.my-header__mobile-drawer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.my-header__mobile-crest {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.my-header__mobile-drawer-titles {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.my-header__mobile-drawer-title {
+  font-family: 'Outfit', 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.my-header__mobile-drawer-sub {
+  font-size: 0.625rem;
+  color: #cbd5e1;
+  letter-spacing: 0.02em;
+}
+
+.my-header__mobile-drawer-close {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.my-header__mobile-drawer-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Mobile Nav List */
+.my-header__mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  flex: 1;
+}
+
+.my-header__mobile-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.25rem;
+  text-decoration: none;
+  color: #1e293b;
+  border-bottom: 1px solid #f1f5f9;
+  background: #ffffff;
+  border-left: 3px solid transparent;
+  transition: all 0.15s ease;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  font-family: inherit;
+}
+
+.my-header__mobile-nav-item--btn {
+  border-top: none;
+  border-right: none;
+  cursor: pointer;
+}
+
+.my-header__mobile-nav-item:hover,
+.my-header__mobile-nav-item:active {
+  background: #f0f7fb;
+  color: #012f61;
+}
+
+.my-header__mobile-nav-item--active {
+  background: #e9f4f9;
+  border-left-color: #012f61;
+  color: #012f61;
+  font-weight: 600;
+}
+
+.my-header__mobile-nav-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #e8f3f8;
+  color: #012f61;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.my-header__mobile-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.my-header__mobile-nav-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  line-height: 1.25;
+}
+
+.my-header__mobile-nav-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.my-header__mobile-nav-hint {
+  font-size: 0.675rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.my-header__mobile-nav-arrow {
+  font-size: 1.15rem;
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+/* Mobile Drawer Footer */
+.my-header__mobile-drawer-footer {
+  padding: 1.25rem;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.my-header__mobile-gov-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+  text-align: center;
+}
+
+.my-header__mobile-admin-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.my-header__mobile-admin-link {
+  background: #047857;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.6rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.my-header__mobile-logout-link {
+  background: transparent;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 900px) {
   .my-header__jim-crest {
-    height: 40px;
+    height: 42px;
   }
   .my-header__jim-title {
     font-size: 0.8125rem;
@@ -212,27 +513,48 @@
     font-size: 0.58rem;
   }
   .my-header__myvisa-logo {
-    height: 30px;
-    width: auto;
+    height: 32px;
     max-width: 130px;
   }
+}
+
+/* Mobile Breakpoint: Switch navigation to 3-bar hamburger */
+@media (max-width: 768px) {
   .my-header__nav-inner {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding: 0 1rem;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0;
   }
+
+  /* Show mobile portal status pill on left */
+  .my-header__mobile-status-pill {
+    display: flex;
+  }
+
+  /* Hide desktop horizontal links */
   .my-header__nav-links {
-    gap: 0.75rem;
-    overflow-x: auto;
-    white-space: nowrap;
+    display: none !important;
+  }
+
+  /* Show 3-Bar Hamburger Menu Button */
+  .my-header__hamburger-btn {
+    display: flex;
+  }
+
+  .my-header__right-controls {
+    gap: 0.5rem;
+  }
+
+  .my-header__login-btn {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.72rem;
   }
 }
 
 @media (max-width: 600px) {
   .my-header__top-inner {
     width: calc(100% - 1.5rem);
-    padding: 0.25rem 0;
+    padding: 0.2rem 0;
   }
   .my-header__jim-crest {
     height: 36px;
@@ -249,20 +571,13 @@
     max-width: 95px;
   }
   .my-header__nav-inner {
-    width: calc(100% - 1rem);
-    gap: 0.65rem;
-    padding: 0 0.5rem;
-    -webkit-overflow-scrolling: touch;
+    width: calc(100% - 1.5rem);
   }
-  .my-header__nav-links {
-    gap: 0.65rem;
-  }
-  .my-header__nav-item {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.15rem;
+  .my-header__mobile-status-pill {
+    font-size: 0.68rem;
   }
   .my-header__login-btn {
-    padding: 0.25rem 0.65rem;
+    padding: 0.28rem 0.6rem;
     font-size: 0.7rem;
   }
 }

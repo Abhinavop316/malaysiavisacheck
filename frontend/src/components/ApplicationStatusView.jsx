@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import html2pdf from "html2pdf.js";
+import { downloadOfficialEVisaPDF } from "../utils/pdfGenerator";
 import MalaysiaOfficialEVisaSlip from "./MalaysiaOfficialEVisaSlip";
 import "../styles/ApplicationStatusView.css";
 
@@ -56,27 +56,10 @@ function ApplicationStatusView({ clientData, onNewSearch }) {
         return;
       }
 
-      const opt = {
-        margin: 0,
-        filename: `Malaysia_eVISA_${passportNumber || "ENTRY"}.pdf`,
-        image: { type: "jpeg", quality: 0.98 },
-        html2canvas: {
-          scale: 2,
-          useCORS: true,
-          logging: false,
-          scrollY: 0,
-          scrollX: 0,
-          windowWidth: 1280,
-        },
-        jsPDF: {
-          unit: "mm",
-          format: "a4",
-          orientation: "portrait",
-        },
-        pagebreak: { mode: "css" },
-      };
-
-      await html2pdf().set(opt).from(element).save();
+      await downloadOfficialEVisaPDF(
+        element,
+        `Malaysia_eVISA_${passportNumber || "ENTRY"}.pdf`
+      );
     } catch (err) {
       console.error("PDF generation failed:", err);
     } finally {
@@ -232,16 +215,16 @@ function ApplicationStatusView({ clientData, onNewSearch }) {
       </div>
 
       {/* 7. OFF-SCREEN OFFICIAL eVISA CERTIFICATE SHEET FOR DIRECT PDF GENERATION */}
-      {/* Kept off-screen so user sees ONLY the status verification card, while html2pdf generates and downloads the official slip */}
+      {/* Positioned at fixed (0, 0) strictly behind the page body so html2canvas captures with 100% desktop fidelity */}
       <div
         className="my-pdf-hidden-render"
         aria-hidden="true"
         style={{
           position: "fixed",
           top: 0,
-          left: "-99999px",
+          left: 0,
           width: "794px",
-          zIndex: -99999,
+          zIndex: -9999,
           pointerEvents: "none",
         }}
       >

@@ -79,9 +79,6 @@
   color: #000000 !important;
   position: relative !important;
   overflow: hidden !important;
-  page-break-inside: avoid !important;
-  page-break-after: avoid !important;
-  break-inside: avoid !important;
   margin: 0 auto !important;
 }
 

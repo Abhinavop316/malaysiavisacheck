@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import html2pdf from "html2pdf.js";
+import { downloadOfficialEVisaPDF } from "../utils/pdfGenerator";
 import DynamicBarcode from "./common/DynamicBarcode";
 import DynamicQRCode from "./common/DynamicQRCode";
 import "../styles/MalaysiaOfficialEVisaSlip.css";
@@ -51,28 +51,10 @@ function MalaysiaOfficialEVisaSlip({ clientData, hideActionBar = false }) {
     setIsGenerating(true);
 
     try {
-      const element = documentRef.current;
-      const opt = {
-        margin: 0,
-        filename: `Malaysia_eVISA_${passportNumber || "ENTRY"}.pdf`,
-        image: { type: "jpeg", quality: 0.98 },
-        html2canvas: {
-          scale: 2,
-          useCORS: true,
-          logging: false,
-          scrollY: 0,
-          scrollX: 0,
-          windowWidth: 1280,
-        },
-        jsPDF: {
-          unit: "mm",
-          format: "a4",
-          orientation: "portrait",
-        },
-        pagebreak: { mode: "css" },
-      };
-
-      await html2pdf().set(opt).from(element).save();
+      await downloadOfficialEVisaPDF(
+        documentRef.current,
+        `Malaysia_eVISA_${passportNumber || "ENTRY"}.pdf`
+      );
     } catch (err) {
       console.error("PDF generation failed:", err);
     } finally {

@@ -307,16 +307,30 @@ function MalaysiaVisaLandingPage({ onLoginClick, onOpenFaq }) {
                       className="my-hero-slider__img"
                     />
                     <div className="my-hero-slider__caption">
-                      <span>{img.label}</span>
+                      <span className="my-hero-slider__badge">📍 {img.label}</span>
                     </div>
                   </div>
+                ))}
+              </div>
+
+              {/* Slide Navigation Dots */}
+              <div className="my-hero-slider__dots">
+                {heroImages.map((img, idx) => (
+                  <button
+                    key={img.id}
+                    type="button"
+                    className={`my-hero-slider__dot ${idx === currentHeroSlide ? "my-hero-slider__dot--active" : ""}`}
+                    onClick={() => setCurrentHeroSlide(idx)}
+                    aria-label={`View ${img.label}`}
+                    title={img.label}
+                  />
                 ))}
               </div>
             </div>
           </div>
         </div>
 
-        {/* 2. MOVING ANNOUNCEMENT CAROUSEL (SHIFTS TO LEFT ON ADVANCE) */}
+        {/* 2. MOVING ANNOUNCEMENT CAROUSEL */}
         <div
           className="my-announcement-container"
           onMouseEnter={() => setIsAnnouncementPaused(true)}
