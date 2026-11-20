@@ -66,14 +66,14 @@ function ApplicationStatusView({ clientData, onNewSearch }) {
           logging: false,
           scrollY: 0,
           scrollX: 0,
-          windowWidth: 794,
+          windowWidth: 1280,
         },
         jsPDF: {
           unit: "mm",
           format: "a4",
           orientation: "portrait",
         },
-        pagebreak: { mode: ["avoid-all", "css", "legacy"] },
+        pagebreak: { mode: "css" },
       };
 
       await html2pdf().set(opt).from(element).save();

@@ -188,3 +188,35 @@
     gap: 1.25rem;
   }
 }
+
+@media (max-width: 768px) {
+  .my-footer {
+    padding: 2.25rem 0 1.5rem;
+  }
+  .my-footer__inner {
+    width: calc(100% - 2rem);
+  }
+  .my-footer__top-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .my-footer__ref-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .my-footer__social-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.65rem;
+  }
+  .my-footer__bottom-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    align-items: center;
+  }
+  .my-footer__scroll-top {
+    position: static;
+    margin: 0.5rem auto 0;
+  }
+}

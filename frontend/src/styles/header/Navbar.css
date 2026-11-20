@@ -228,3 +228,41 @@
     white-space: nowrap;
   }
 }
+
+@media (max-width: 600px) {
+  .my-header__top-inner {
+    width: calc(100% - 1.5rem);
+    padding: 0.25rem 0;
+  }
+  .my-header__jim-crest {
+    height: 36px;
+  }
+  .my-header__jim-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.01em;
+  }
+  .my-header__jim-sub {
+    font-size: 0.52rem;
+  }
+  .my-header__myvisa-logo {
+    height: 26px;
+    max-width: 95px;
+  }
+  .my-header__nav-inner {
+    width: calc(100% - 1rem);
+    gap: 0.65rem;
+    padding: 0 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .my-header__nav-links {
+    gap: 0.65rem;
+  }
+  .my-header__nav-item {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.15rem;
+  }
+  .my-header__login-btn {
+    padding: 0.25rem 0.65rem;
+    font-size: 0.7rem;
+  }
+}

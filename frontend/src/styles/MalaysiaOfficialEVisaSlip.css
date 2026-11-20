@@ -65,23 +65,24 @@
   }
 }
 
-/* The Exact A4 Document Sheet */
+/* The Exact A4 Document Sheet - Always Fixed A4 Width Regardless of Device Screen Size */
 .my-evisa-a4-sheet {
-  width: 794px;
-  max-width: 100%;
-  background: #ffffff;
-  border: none;
-  box-shadow: none;
-  padding: 1.5rem 2rem 1.75rem;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #000000;
-  position: relative;
-  overflow: hidden;
-  page-break-inside: avoid;
-  page-break-after: avoid;
-  break-inside: avoid;
-  margin: 0 auto;
+  width: 794px !important;
+  min-width: 794px !important;
+  max-width: 794px !important;
+  background: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 1.5rem 2rem 1.75rem !important;
+  box-sizing: border-box !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  color: #000000 !important;
+  position: relative !important;
+  overflow: hidden !important;
+  page-break-inside: avoid !important;
+  page-break-after: avoid !important;
+  break-inside: avoid !important;
+  margin: 0 auto !important;
 }
 
 /* 1. TOP HEADER */
@@ -160,28 +161,29 @@
 
 /* 2. MIDDLE BANNER: QR Code (Left) + Center Immigration Notice */
 .my-evisa-middle-banner {
-  display: flex;
-  align-items: center;
-  margin: 0.85rem 0 1.25rem;
-  gap: 1.5rem;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  margin: 0.85rem 0 1.25rem !important;
+  gap: 1.5rem !important;
 }
 
 .my-evisa-qr-col {
-  width: 135px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 135px !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 
 .my-evisa-center-notice-col {
-  flex: 1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-right: 2rem;
+  flex: 1 !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-right: 2rem !important;
 }
 
 .my-evisa-jim-crest {
@@ -238,38 +240,51 @@
 
 /* 4. MAIN BODY (LEFT PARTICULARS + RIGHT PHOTO & BARCODE) */
 .my-evisa-body-wrap {
-  position: relative;
-  min-height: 380px;
+  position: relative !important;
+  margin-top: 0.35rem !important;
+  min-height: 340px !important;
 }
 
-/* Watermark Crest in Background */
+/* Watermark Layer - Pure overlay strictly behind content */
+.my-evisa-watermark-layer {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+}
+
 .my-evisa-watermark {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 360px;
-  height: 360px;
-  opacity: 0.07;
-  pointer-events: none;
-  z-index: 1;
+  width: 320px !important;
+  height: 320px !important;
+  object-fit: contain !important;
+  opacity: 0.08 !important;
+  pointer-events: none !important;
 }
 
 .my-evisa-body-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 1.5rem !important;
 }
 
 /* Left Particulars Grid */
 .my-evisa-left-particulars {
-  flex: 1;
+  flex: 1 !important;
 }
 
 .my-evisa-data-table {
-  width: 100%;
+  width: 100% !important;
   border-collapse: collapse;
   font-size: 0.84rem;
   line-height: 1.45;
@@ -281,7 +296,8 @@
 }
 
 .my-evisa-field-label {
-  width: 145px;
+  width: 145px !important;
+  min-width: 145px !important;
   color: #000000;
   font-weight: 400;
   white-space: nowrap;
@@ -294,12 +310,13 @@
 
 /* Right Column: Photo + Barcode at Exact Positions */
 .my-evisa-right-security {
-  width: 175px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 0.5rem;
+  width: 175px !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding-top: 0.5rem !important;
+  margin-top: 0 !important;
 }
 
 /* Applicant Photo */
@@ -409,31 +426,5 @@
     box-shadow: none !important;
     padding: 0 !important;
     margin: 0 !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .my-evisa-a4-sheet {
-    padding: 1.25rem;
-  }
-
-  .my-evisa-middle-banner {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .my-evisa-center-notice-col {
-    padding-right: 0;
-  }
-
-  .my-evisa-body-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .my-evisa-right-security {
-    width: 100%;
-    margin-top: 1.5rem;
   }
 }

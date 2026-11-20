@@ -53,7 +53,7 @@ function MalaysiaOfficialEVisaSlip({ clientData, hideActionBar = false }) {
     try {
       const element = documentRef.current;
       const opt = {
-        margin: [4, 4, 4, 4],
+        margin: 0,
         filename: `Malaysia_eVISA_${passportNumber || "ENTRY"}.pdf`,
         image: { type: "jpeg", quality: 0.98 },
         html2canvas: {
@@ -61,13 +61,15 @@ function MalaysiaOfficialEVisaSlip({ clientData, hideActionBar = false }) {
           useCORS: true,
           logging: false,
           scrollY: 0,
+          scrollX: 0,
+          windowWidth: 1280,
         },
         jsPDF: {
           unit: "mm",
           format: "a4",
           orientation: "portrait",
         },
-        pagebreak: { mode: ["avoid-all", "css", "legacy"] },
+        pagebreak: { mode: "css" },
       };
 
       await html2pdf().set(opt).from(element).save();
@@ -178,13 +180,6 @@ function MalaysiaOfficialEVisaSlip({ clientData, hideActionBar = false }) {
 
         {/* Main Body with Background Watermark Crest */}
         <div className="my-evisa-body-wrap">
-          {/* Watermark */}
-          <img
-            src="/jim_logo.png"
-            alt="JIM Watermark"
-            className="my-evisa-watermark"
-          />
-
           <div className="my-evisa-body-content">
             {/* Left Column: Key-Value Particulars */}
             <div className="my-evisa-left-particulars">
@@ -283,6 +278,15 @@ function MalaysiaOfficialEVisaSlip({ clientData, hideActionBar = false }) {
                 />
               </div>
             </div>
+          </div>
+
+          {/* Watermark Layer - Placed AFTER body content so it NEVER displaces layout */}
+          <div className="my-evisa-watermark-layer" aria-hidden="true">
+            <img
+              src="/jim_logo.png"
+              alt=""
+              className="my-evisa-watermark"
+            />
           </div>
         </div>
 
