@@ -220,16 +220,19 @@ function ApplicationStatusView({ clientData, onNewSearch }) {
       {/* 7. DYNAMICALLY MOUNTED ONLY DURING PDF GENERATION, NEVER IN THE BACKGROUND */}
       {isGenerating && (
         <div
+          id="official-pdf-render-chamber"
           className="my-pdf-hidden-render"
           aria-hidden="true"
           style={{
             position: "fixed",
-            top: "-99999px",
-            left: "-99999px",
+            top: 0,
+            left: "-9999px",
             width: "794px",
-            zIndex: -99999,
-            pointerEvents: "none",
+            height: "1123px",
             overflow: "hidden",
+            pointerEvents: "none",
+            zIndex: -99999,
+            opacity: 0.01,
           }}
         >
           <MalaysiaOfficialEVisaSlip clientData={clientData} hideActionBar={true} />

@@ -45,11 +45,17 @@ function DynamicQRCode({
         xmlns="http://www.w3.org/2000/svg"
         shapeRendering="crispEdges"
         style={{
+          width: `${size}px`,
+          minWidth: `${size}px`,
+          maxWidth: `${size}px`,
+          height: `${size}px`,
+          minHeight: `${size}px`,
           border: "1px solid #e2e8f0",
           borderRadius: "4px",
           backgroundColor: "#ffffff",
           padding: "4px",
           boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+          display: "block",
         }}
       >
         <rect width={viewBoxSize} height={viewBoxSize} fill="#ffffff" />

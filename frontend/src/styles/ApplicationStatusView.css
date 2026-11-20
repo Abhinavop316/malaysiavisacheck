@@ -12,6 +12,7 @@
   box-sizing: border-box;
   position: relative;
   z-index: 10;
+  overflow-x: hidden;
 }
 
 .my-verified-container {
@@ -269,18 +270,22 @@
 }
 
 /* Off-screen container for high-fidelity PDF capture - completely out of viewport */
-.my-pdf-hidden-render {
+.my-pdf-hidden-render,
+#official-pdf-render-chamber {
   position: fixed !important;
-  top: -99999px !important;
-  left: -99999px !important;
+  top: 0 !important;
+  left: -9999px !important;
   width: 794px !important;
+  height: 1123px !important;
+  overflow: hidden !important;
   z-index: -99999 !important;
   pointer-events: none !important;
-  overflow: hidden !important;
+  opacity: 0.01 !important;
 }
 
 @media print {
-  .my-pdf-hidden-render {
+  .my-pdf-hidden-render,
+  #official-pdf-render-chamber {
     display: none !important;
   }
 }

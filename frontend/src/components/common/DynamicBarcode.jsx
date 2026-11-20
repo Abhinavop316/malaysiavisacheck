@@ -37,7 +37,12 @@ function DynamicBarcode({
         viewBox={`0 0 ${totalWidth} ${totalHeight}`}
         width={totalWidth}
         height={totalHeight}
-        style={{ maxWidth: "100%", height: "auto" }}
+        style={{
+          width: `${totalWidth}px`,
+          minWidth: `${totalWidth}px`,
+          height: `${totalHeight}px`,
+          display: "block",
+        }}
         xmlns="http://www.w3.org/2000/svg"
         shapeRendering="crispEdges"
       >
