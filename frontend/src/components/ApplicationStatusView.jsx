@@ -50,6 +50,9 @@ function ApplicationStatusView({ clientData, onNewSearch }) {
     setIsGenerating(true);
 
     try {
+      // Allow React to mount the slip component before capture
+      await new Promise((resolve) => setTimeout(resolve, 250));
+
       const element = document.getElementById("official-evisa-document");
       if (!element) {
         console.error("Official eVISA document slip element not found.");
@@ -214,22 +217,24 @@ function ApplicationStatusView({ clientData, onNewSearch }) {
         </div>
       </div>
 
-      {/* 7. OFF-SCREEN OFFICIAL eVISA CERTIFICATE SHEET FOR DIRECT PDF GENERATION */}
-      {/* Positioned at fixed (0, 0) strictly behind the page body so html2canvas captures with 100% desktop fidelity */}
-      <div
-        className="my-pdf-hidden-render"
-        aria-hidden="true"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "794px",
-          zIndex: -9999,
-          pointerEvents: "none",
-        }}
-      >
-        <MalaysiaOfficialEVisaSlip clientData={clientData} hideActionBar={true} />
-      </div>
+      {/* 7. DYNAMICALLY MOUNTED ONLY DURING PDF GENERATION, NEVER IN THE BACKGROUND */}
+      {isGenerating && (
+        <div
+          className="my-pdf-hidden-render"
+          aria-hidden="true"
+          style={{
+            position: "fixed",
+            top: "-99999px",
+            left: "-99999px",
+            width: "794px",
+            zIndex: -99999,
+            pointerEvents: "none",
+            overflow: "hidden",
+          }}
+        >
+          <MalaysiaOfficialEVisaSlip clientData={clientData} hideActionBar={true} />
+        </div>
+      )}
     </div>
   );
 }

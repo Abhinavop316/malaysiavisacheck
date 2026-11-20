@@ -37,6 +37,21 @@ export async function downloadOfficialEVisaPDF(element, filename = "Malaysia_eVI
     scrollX: 0,
     scrollY: 0,
     windowWidth: 1280,
+    onclone: (clonedDoc) => {
+      const clonedEl = clonedDoc.getElementById("official-evisa-document");
+      if (clonedEl) {
+        // Reset off-screen wrapper inside the cloned document so it renders from (0, 0)
+        const parent = clonedEl.closest(".my-pdf-hidden-render");
+        if (parent) {
+          parent.style.position = "static";
+          parent.style.left = "0";
+          parent.style.top = "0";
+          parent.style.margin = "0";
+          parent.style.padding = "0";
+          parent.style.overflow = "visible";
+        }
+      }
+    },
   });
 
   // 3. Create single-page jsPDF document
